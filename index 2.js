@@ -17,7 +17,11 @@ let developer2 = {
 }
 
 function getLocation () {
-    console.log("Контитент: " + developer1.continent + ", Страна: " + developer1.country),
-    console.log("Контитент: " + developer2.continent + ", Страна: " + developer2.country)
+    console.log("Континент: " + this.continent, ", Страна: " + this.country);
 }
-getLocation()
+
+developer1.f = getLocation;
+developer2.f = getLocation;
+
+developer1.f();
+developer2.f();
